@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "host": "postgres",
+  "port": 5432,
+  "username": "paymentsapp",
+  "password": "paymentspass",
+  "database": "payments",
+  "entities": ["src/**/**.entity{.ts,.js}"],
+  "synchronize": true
+}

@@ -1,0 +1,20 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: npm run start:dev
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://paymentsapp@postgres/payments
+  postgres:
+    image: postgres:11.1-alpine
+    environment:
+      POSTGRES_USER: paymentsapp
+      POSTGRES_PASSWORD: paymentspass
+      POSTGRES_DB: payments

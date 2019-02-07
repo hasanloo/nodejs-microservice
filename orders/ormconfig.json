@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "host": "postgres",
+  "port": 5432,
+  "username": "ordersapp",
+  "password": "orderspass",
+  "database": "orders",
+  "entities": ["src/**/**.entity{.ts,.js}"],
+  "synchronize": true
+}
