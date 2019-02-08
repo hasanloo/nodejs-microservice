@@ -56,7 +56,7 @@ export class OrderService {
             name: order.name,
             address: order.address,
             price: order.price,
-            order_number: order.nmbr,
+            orderNumber: order.nmbr,
         });
 
         // TODO: move payment address to env
